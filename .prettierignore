@@ -1,0 +1,5 @@
+dist
+coverage
+package-lock.json
+examples/vault/templates
+docs/assets/*.svg

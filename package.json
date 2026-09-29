@@ -1,0 +1,72 @@
+{
+  "name": "brain-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that gives AI agents safe access to an Obsidian vault kept as an LLM wiki",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "obsidian",
+    "llm",
+    "ai-agents",
+    "knowledge-base"
+  ],
+  "homepage": "https://github.com/rf-camillo/brain-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rf-camillo/brain-mcp.git"
+  },
+  "license": "MIT",
+  "author": "Rafael Camillo",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "brain-mcp": "dist/bin/mcp.js",
+    "brain": "dist/bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run deps && npm run coverage",
+    "coverage": "vitest run --coverage",
+    "prepack": "npm run build",
+    "deps": "depcruise src"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.20.4",
+    "@vitest/coverage-v8": "^4.1.11",
+    "dependency-cruiser": "^17.4.3",
+    "eslint": "^10.11.0",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
+    "prettier": "^3.9.9",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^4.1.11"
+  }
+}
