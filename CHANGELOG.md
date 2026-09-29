@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
-## [0.1.0] - Unreleased
+## [0.1.0] - 2026-09-29
 
 ### Added
 
@@ -14,3 +14,5 @@ All notable changes to this project are documented here. The format follows [Kee
 - Per-file write lock and atomic replacement, so concurrent tool calls never lose entries.
 - Library entry point with type declarations (`createServer`, `Vault`, tools, `callTool`).
 - Fictional example vault and documentation.
+
+[0.1.0]: https://github.com/rf-camillo/brain-mcp/releases/tag/v0.1.0
