@@ -1,0 +1,14 @@
+frontmatter:
+  required: [type, summary]
+blocked:
+  - private/**
+ignored:
+  - templates/**
+  - AGENTS.md
+writable:
+  - inbox/**
+  - diary/**
+diary:
+  path: diary/{yyyy}/{yyyy}-{mm}-{dd}.md
+  template: templates/Daily.md
+  sections: [Product, Engineering, Decisions]
